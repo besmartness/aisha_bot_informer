@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose
-    .connect(process.env.MONGO_LOCAL_URI, {
+    .connect("mongodb+srv://user:wtt-product@cluster0.005to.mongodb.net/informer-bot", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

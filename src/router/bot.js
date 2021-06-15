@@ -1,8 +1,8 @@
 const {Telegraf, Extra, Markup} = require('telegraf')
 const Product = require('../model/Product')
 
-const bot = new Telegraf(process.env.BOT_TOKEN)
-const MANAGER = process.env.MANAGER_ID
+const bot = new Telegraf("1830575792:AAH67uPufaVYqUYTzM0QAus6ZxmMdvTe408")
+const MANAGER = "537232926"
 
 bot.start(async ctx => {
         // SEARCH according to what user clicked

@@ -7,8 +7,8 @@ const {Markup} = require('telegraf')
 const fs = require('fs')
 const upload = require('../middleware/productImg')
 
-const CHANNEL_ID = process.env.CHANNEL_ID
-const MANAGER = process.env.MANAGER
+const CHANNEL_ID = "-1001412369700"
+const MANAGER = "537232926"
 
 router.get('/', (req, res) => {
     try {
@@ -40,7 +40,7 @@ router.post('/add-product', upload.single('pic'), async (req, res) => {
         const message = `Name:\t\t${product.title}\nDescription:\t\t${product.description}\nPrice:\t\t$${product.price}`
         const devImageUrl = `https://wtt-informer-tg-bot.herokuapp.com/${product.image}`
         
-        const devurl = `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendPhoto?chat_id=${CHANNEL_ID}&photo=${devImageUrl}&caption=${message}&reply_markup=${JSON.stringify(urlButton.reply_markup)}`;
+        const devurl = `https://api.telegram.org/bot1830575792:AAH67uPufaVYqUYTzM0QAus6ZxmMdvTe408/sendPhoto?chat_id=${CHANNEL_ID}&photo=${devImageUrl}&caption=${message}&reply_markup=${JSON.stringify(urlButton.reply_markup)}`;
         
         // SENDING TEMPLATED MESSAGE
         await request({url: devurl, json: true}, (error, res, body) => {
