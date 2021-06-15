@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="jumbotron">
+    <h1>Hello WORLD</h1>
+</div>
+<form action="/add-product" id="form" class="container" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" placeholder="IPhone">
+        <small id="" class="form-text text-muted">Enter title of your product</small>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" name="description" placeholder="Title of product">
+        <small id="" class="form-text text-muted">Enter description of your product</small>
+    </div>
+    <div class="form-group">
+        <label for="price">$ Price</label>
+        <input type="number" class="form-control" name="price" placeholder="$price">
+    </div>
+    <div class="form-group">
+        <label for="price">Image</label>
+        <input type="file" id="pic" name="pic">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    // const subForm = document.querySelector('#form')
+    //
+    // subForm.addEventListener('submit', async event => {
+    //     event.preventDefault()
+    //
+    //     const title = document.querySelector('#title').value
+    //     const description = document.querySelector('#description').value
+    //     const price = document.querySelector('#price').value
+    //     const image = document.querySelector('#pic').value.replace('C:\\fakepath\\', '')
+    //
+    //     const body = {
+    //         title, description, price, image: `/image/${image}`
+    //     }
+    //
+    //     console.log(image)
+    //
+    //     fetch('/add-product', {
+    //         method: 'post',
+    //         // headers: {
+    //         //     'Content-Type': 'application/json'
+    //         // },
+    //         body: JSON.stringify(body)
+    //     })
+    //         .then(data => data.json())
+    //         .then(res => {
+    //             console.log(res)
+    //         })
+    //         .catch(e => console.log(e))
+    // })
+</script>
+</body>
+</html>
